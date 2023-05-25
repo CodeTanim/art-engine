@@ -1,3 +1,7 @@
+body {
+  background-color: #282c34;
+}
+
 .App {
   text-align: center;
 }
@@ -14,19 +18,72 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding-top: 5%; /* Reduced from 10% */
 }
 
 .App-link {
   color: #61dafb;
 }
+
+.input-group {
+  display: flex;
+  flex-direction: column; /* Changed from row */
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 300px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 10px; /* Added to separate from the button */
+}
+
+button {
+  width: 200px;
+  height: 30px;
+  background-color: #36a2c0;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4baad4;
+}
+
+.generated-image {
+  text-align: center;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.download-button {
+
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  background-color: black;
+  opacity: .7;
+}
+
 
 @keyframes App-logo-spin {
   from {
