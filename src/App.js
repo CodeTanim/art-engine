@@ -5,6 +5,7 @@ import './App.css';
 function App() {
   const [seedText, setSeedText] = useState('');
   const [imageSrc, setImageSrc] = useState('');
+  const [isLoading, setIsLoading] = useState(false);  // New state for loading status
 
   const handleInputChange = (event) => {
     setSeedText(event.target.value);
@@ -15,9 +16,11 @@ function App() {
     const newSeedText = `${seedText} ${randomNumber}`;
     setSeedText(newSeedText); 
 
+    setIsLoading(true);  // Start loading
     query({inputs: newSeedText}).then((response) => {
       // Convert blob to object URL and use it as image source
       setImageSrc(URL.createObjectURL(response));
+      setIsLoading(false);  // End loading
     });
   };
 
@@ -29,13 +32,18 @@ function App() {
           <button onClick={generateImage}>Generate AI Art</button>
         </div>
         <div className="generated-image">
-      {imageSrc && (
-    <div className="image-container">
-      <img src={imageSrc} alt="Generated art" />
-
-    </div>
-  )}
-</div>
+          {isLoading ? (
+            <div className="spinner"></div>
+          ) : imageSrc && (
+            <div className="image-container">
+              <img src={imageSrc} alt="Generated art" />
+              <a href={imageSrc} download="GeneratedImage.png">
+                <button className="download-button">D
+                </button>
+              </a>
+            </div>
+          )}
+        </div>
       </header>
     </div>
   );
