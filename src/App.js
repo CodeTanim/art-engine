@@ -11,6 +11,8 @@ function App() {
     setSeedText(event.target.value);
   };
 
+  // console.log(process.env.REACT_APP_API_KEY);
+
   const generateImage = () => {
     const randomNumber = Math.floor(Math.random() * 1000000); // Generates a random integer
     const newSeedText = `${seedText} ${randomNumber}`;
