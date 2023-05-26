@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/art-engine/static/css/main.56a1839c.css",
+    "main.js": "/art-engine/static/js/main.19f3f702.js",
+    "static/js/787.a3b70374.chunk.js": "/art-engine/static/js/787.a3b70374.chunk.js",
+    "index.html": "/art-engine/index.html",
+    "main.56a1839c.css.map": "/art-engine/static/css/main.56a1839c.css.map",
+    "main.19f3f702.js.map": "/art-engine/static/js/main.19f3f702.js.map",
+    "787.a3b70374.chunk.js.map": "/art-engine/static/js/787.a3b70374.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.56a1839c.css",
+    "static/js/main.19f3f702.js"
+  ]
+}
