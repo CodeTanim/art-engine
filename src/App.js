@@ -30,7 +30,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="input-group">
-          <input type="text" value={seedText} onChange={handleInputChange} placeholder="Enter seed text" />
+          <input type="text" value={seedText} onChange={handleInputChange} placeholder="Enter prompt" />
           <button onClick={generateImage}>Generate AI Art</button>
         </div>
         <div className="generated-image">

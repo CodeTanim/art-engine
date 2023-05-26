@@ -75,7 +75,7 @@ button:hover {
 
 .image-container img {
   border-radius: 15px;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.7), 0px 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 
