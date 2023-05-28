@@ -1,49 +1,51 @@
 import React, { useState } from 'react';
-import { query } from './imageAPI';  // Import the query function
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { query } from './imageAPI';
 import './App.css';
 
 function App() {
   const [seedText, setSeedText] = useState('');
-  const [imageSrc, setImageSrc] = useState('');
-  const [isLoading, setIsLoading] = useState(false);  // New state for loading status
+  const [imageSrcs, setImageSrcs] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleInputChange = (event) => {
     setSeedText(event.target.value);
   };
 
-  // console.log(process.env.REACT_APP_API_KEY);
-
-  const generateImage = () => {
-    const randomNumber = Math.floor(Math.random() * 1000000); // Generates a random integer
-    const newSeedText = `${seedText} ${randomNumber}`;
-    setSeedText(newSeedText); 
-
-    setIsLoading(true);  // Start loading
-    query({inputs: newSeedText}).then((response) => {
-      // Convert blob to object URL and use it as image source
-      setImageSrc(URL.createObjectURL(response));
-      setIsLoading(false);  // End loading
-    });
+  const generateImages = async () => {
+    setIsLoading(true);
+    const newImageSrcs = [];
+    for (let i = 0; i < 4; i++) {
+      const randomNumber = Math.floor(Math.random() * 1000000);
+      const response = await query({inputs: `${seedText} ${randomNumber}`});
+      newImageSrcs.push(URL.createObjectURL(response));
+    }
+    setImageSrcs(newImageSrcs);
+    setIsLoading(false);
   };
 
   return (
     <div className="App">
       <header className="App-header">
         <div className="input-group">
-          <input type="text" value={seedText} onChange={handleInputChange} placeholder="Enter prompt" />
-          <button onClick={generateImage}>Generate AI Art</button>
+          <input type="text" value={seedText} onChange={handleInputChange} placeholder="Enter prompt"/>
+          <button onClick={generateImages}>Generate AI Art</button>
         </div>
         <div className="generated-image">
           {isLoading ? (
             <div className="spinner"></div>
-          ) : imageSrc && (
-            <div className="image-container">
-              <img src={imageSrc} alt="Generated art" />
-              <a href={imageSrc} download="GeneratedImage.png">
-                <button className="download-button">D
-                </button>
-              </a>
-            </div>
+          ) : (
+            <Carousel>
+              {imageSrcs.map((src, index) => (
+                <div key={index} className="image-container">
+                  <img src={src} alt={`Generated art ${index + 1}`} />
+                  <a href={src} download={`GeneratedImage${index + 1}.png`}>
+                    <button className="download-button">D</button>
+                  </a>
+                </div>
+              ))}
+            </Carousel>
           )}
         </div>
       </header>
