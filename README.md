@@ -1,6 +1,6 @@
 # Art-Engine
 
-Art-Engine is a cutting-edge platform that leverages the power of AI to generate images based on user prompts. Built with React, this application provides an intuitive interface for users to interact with and visualize AI-generated art. Check it out (here)[https://codetanim.github.io/art-engine/]. 
+Art-Engine is a cutting-edge platform that leverages the power of AI to generate images based on user prompts. Built with React, this application provides an intuitive interface for users to interact with and visualize AI-generated art. Check it out [here](https://codetanim.github.io/art-engine/). 
 
 
 ## Features
