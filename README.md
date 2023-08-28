@@ -20,12 +20,12 @@ Art-Engine is a cutting-edge platform that leverages the power of AI to generate
 
 
 2. Navigate to the repository
-``` bash
+```bash
 cd Art-Engine
 ```
 
 
 3. Install the required dependencies:
-``` bash
+```bash
 npm install
 ```
