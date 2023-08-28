@@ -15,12 +15,17 @@ Art-Engine is a cutting-edge platform that leverages the power of AI to generate
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/Art-Engine.git
+   ```
 
 
 
 2. Navigate to the repository
+``` bash
 cd Art-Engine
+```
 
 
 3. Install the required dependencies:
+``` bash
 npm install
+```
