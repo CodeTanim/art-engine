@@ -38,7 +38,7 @@ npm start
 
 The application should now be running on http://localhost:3000.
 
-Usage
+## Usage
 
 Navigate to the main page.
 Input your desired prompt into the text box.
@@ -46,6 +46,8 @@ Click the "Generate" button.
 Witness the AI create a masterpiece for you!
 Roadmap
 
-Login Features: In the upcoming releases, we're planning to introduce user login functionality, allowing personal galleries and saved artworks.
-Custom AI Model: Currently, we're leveraging an open-source AI model for image generation. Our future goal is to build and train our own model to provide unique and customized art experiences for our users.
+## Next steps
+
+- Login Features: In the upcoming releases, we're planning to introduce user login functionality, allowing personal galleries and saved artworks.
+- Custom AI Model: Currently, we're leveraging an open-source AI model for image generation. Our future goal is to build and train our own model to provide unique and customized art experiences for our users.
 
