@@ -29,3 +29,9 @@ cd Art-Engine
 ```bash
 npm install
 ```
+
+4. Start the app:
+```bash
+npm start
+```
+   
