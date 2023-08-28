@@ -1,8 +1,7 @@
 # Art-Engine
 
-Art-Engine is a cutting-edge platform that leverages the power of AI to generate images based on user prompts. Built with React, this application provides an intuitive interface for users to interact with and visualize AI-generated art.
+Art-Engine is a cutting-edge platform that leverages the power of AI to generate images based on user prompts. Built with React, this application provides an intuitive interface for users to interact with and visualize AI-generated art. Check it out (here)[https://codetanim.github.io/art-engine/]. 
 
-![Art-Engine Demo](link-to-demo-image-or-gif)
 
 ## Features
 
@@ -48,6 +47,7 @@ Roadmap
 
 ## Next steps
 
-- Login Features: In the upcoming releases, we're planning to introduce user login functionality, allowing personal galleries and saved artworks.
-- Custom AI Model: Currently, we're leveraging an open-source AI model for image generation. Our future goal is to build and train our own model to provide unique and customized art experiences for our users.
+- Login Features: In the upcoming releases, I am planning to introduce user login functionality, allowing personal galleries and saved artworks.
+- Custom AI Model: Currently,I am leveraging an open-source AI model for image generation. My future goal is to build and train my own model to provide unique and customized art experiences for users.
+- Also need to update the **Example Prompts** page to contain some of the best prompts for image generations. 
 
