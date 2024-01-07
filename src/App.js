@@ -27,7 +27,7 @@ function App() {
   const generateImages = async () => {
     setIsLoading(true);
     const newImageSrcs = [];
-    const mid = 'mdjrny-v4 style';
+    const mid = 'mdjrny-v4 style, aesthetic, beautiful, detailed, 4k, ultra-hd';
     for (let i = 0; i < 4; i++) {
       const randomNumber = Math.floor(Math.random() * 1000000);
       const response = await query({inputs: `${seedText} ${randomNumber} ${mid}`});
@@ -39,7 +39,7 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar />
+      {/* <NavBar /> */}
       <header className="App-header">
         <div className="input-group">
           <input type="text" value={seedText} onChange={handleInputChange} placeholder="Enter prompt"/>
